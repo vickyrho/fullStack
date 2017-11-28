@@ -1,0 +1,35 @@
+
+<div ng-controller ="MainController as Logctrl" >
+
+<div class ="page-header">
+    <h1>User Login</h1>
+</div>
+
+<form>
+
+
+<label>Username:</label>
+<input class="form-control" type="text" name="username" ng-model="Logctrl.userDetails.username"><br>
+
+    <label>password:</label>
+    <input class="form-control" type="password" name="password" ng-model="Logctrl.userDetails.password"><br>
+
+
+    <button class ="btn btn-primary" type="submit" ng-click="Logctrl.display(userDetails)">Login</button>
+
+</form>
+
+    <table>
+        <thead>
+        <th>sl/no</th>
+        <th>Name</th>
+        <th>Description</th>
+        </thead>
+        <tbody ng-repeat="item in ctrl.items;">
+        <td> {{$index + 1}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        </tbody>
+    </table>
+
+</div>
